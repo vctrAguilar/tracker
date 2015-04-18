@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @entrepreneur.name %>
+</p>
+
+<p>
+  <strong>Paternal last:</strong>
+  <%= @entrepreneur.paternal_last %>
+</p>
+
+<p>
+  <strong>Maternal last:</strong>
+  <%= @entrepreneur.maternal_last %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @entrepreneur.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @entrepreneur.phone %>
+</p>
+
+<p>
+  <strong>Mobile:</strong>
+  <%= @entrepreneur.mobile %>
+</p>
+
+<p>
+  <strong>Access:</strong>
+  <%= @entrepreneur.access %>
+</p>
+
+<%= link_to 'Edit', edit_entrepreneur_path(@entrepreneur) %> |
+<%= link_to 'Back', entrepreneurs_path %>

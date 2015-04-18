@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Entrepreneurs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Paternal last</th>
+      <th>Maternal last</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Mobile</th>
+      <th>Access</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @entrepreneurs.each do |entrepreneur| %>
+      <tr>
+        <td><%= entrepreneur.name %></td>
+        <td><%= entrepreneur.paternal_last %></td>
+        <td><%= entrepreneur.maternal_last %></td>
+        <td><%= entrepreneur.email %></td>
+        <td><%= entrepreneur.phone %></td>
+        <td><%= entrepreneur.mobile %></td>
+        <td><%= entrepreneur.access %></td>
+        <td><%= link_to 'Show', entrepreneur %></td>
+        <td><%= link_to 'Edit', edit_entrepreneur_path(entrepreneur) %></td>
+        <td><%= link_to 'Destroy', entrepreneur, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Entrepreneur', new_entrepreneur_path %>
